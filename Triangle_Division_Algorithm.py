@@ -85,6 +85,6 @@ surf = mlab.surf(board, colormap='gist_earth', warp_scale='auto')
 #mlab.show()
 mlab.imshow(board, colormap='gist_earth')
 mlab.show()
-
+#test
 #wygladzanie
 #2 trojkat

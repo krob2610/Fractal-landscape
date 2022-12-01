@@ -1,6 +1,7 @@
 import numpy as np
 import random
 from mayavi import mlab
+from helpers import smooth
 
 def diamond_board(lvl, glued, initial_corners = None):
     size = (2**lvl)
@@ -51,7 +52,8 @@ def diamond_board(lvl, glued, initial_corners = None):
         tile_size //= 2
     return board
 #surf = mlab.surf(diamond_board(10, glued= True, initial_corners = [1,2,3,4]), colormap='gist_earth', warp_scale='auto')
-board = diamond_board(10, glued= True)
+board = diamond_board(3, glued= True)
+board = smooth(board, 2, 1)
 surf = mlab.surf(board, colormap='gist_earth', warp_scale='auto')
 #mlab.show()
 mlab.imshow(board, colormap='gist_earth')
